@@ -1251,3 +1251,456 @@ ul {
 .stack__label::after {
   transform: scaleX(-1);
 }
+
+/* ============ Contato (2 colunas + formulário) ============ */
+.talk {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 4.5rem;
+  align-items: start;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+}
+.talk__info h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin: 0.2rem 0 2rem;
+}
+.talk__me {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+.talk__avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center top;
+  background: radial-gradient(circle at 50% 35%, #ff8fb0 0%, #b9529a 45%, #4a1f78 100%);
+  border: 1px solid var(--border);
+}
+.talk__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+.talk__role {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+.talk__social {
+  display: flex;
+  gap: 0.6rem;
+  margin: 1.4rem 0 1.6rem;
+}
+.icon-btn--sq {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+}
+.talk__text {
+  color: var(--muted);
+  max-width: 44ch;
+}
+.talk__mail {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  color: var(--accent);
+  border-bottom: 1px dashed currentColor;
+  overflow-wrap: anywhere;
+}
+.talk__mail:hover {
+  color: var(--peach);
+}
+
+.form {
+  display: grid;
+  gap: 1.1rem;
+}
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.field {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+.field > span {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+  background: var(--card-hover);
+}
+.field__count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.form__hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: -0.4rem;
+}
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.2rem;
+}
+.btn-text {
+  background: none;
+  border: 0;
+  padding: 0.4rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+}
+.btn-text:hover {
+  color: var(--text);
+}
+.form__status {
+  font-size: 0.88rem;
+  color: var(--accent);
+  text-align: right;
+}
+
+@media (max-width: 960px) {
+  .talk {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+@media (max-width: 520px) {
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+  .form__actions {
+    justify-content: space-between;
+  }
+}
+
+/* ============ Experiência ============ */
+.exp {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.exp__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.8rem;
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+.exp__list::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--rose), var(--peach) 50%, var(--lilac));
+  opacity: 0.7;
+}
+.exp__item {
+  position: relative;
+}
+.exp__item::before {
+  content: '';
+  position: absolute;
+  left: -1.8rem;
+  top: 1.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+  z-index: 1;
+}
+.exp__item:first-child::before {
+  background: var(--accent);
+}
+
+/* card compacto */
+.exp__card {
+  padding: 1.15rem 1.3rem;
+}
+.exp__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem 1rem;
+  margin-bottom: 0.9rem;
+}
+.exp__head h3 {
+  font-size: 1.3rem;
+}
+.exp__place {
+  margin-top: 0.1rem;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+/* datas sempre no canto superior direito */
+.exp__period,
+.exp__role-head span {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+.exp__period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.exp__period.is-current {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.exp__period i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.exp__role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.55rem;
+}
+.exp__role-head h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.exp__role-head span {
+  color: var(--muted);
+}
+
+/* vários cargos na mesma empresa: mini linha de progressão */
+.exp__roles--multi {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.3rem;
+}
+.exp__roles--multi::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  border-left: 2px dashed color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.exp__roles--multi .exp__role {
+  position: relative;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-sm);
+}
+
+.exp__roles--multi .exp__role::before {
+  content: '';
+  position: absolute;
+  left: -1.3rem;
+  top: 1.15rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.exp__bullets {
+  display: grid;
+  gap: 0.3rem;
+}
+.exp__bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.exp__bullets li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
+/* experiência atual em destaque */
+.exp__card--current {
+  padding: 1.4rem 1.5rem;
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  background: linear-gradient(140deg, color-mix(in srgb, var(--rose) 14%, var(--card)), var(--card) 60%);
+  box-shadow: 0 24px 60px -30px var(--rose);
+}
+.exp__card--current .exp__head h3 {
+  font-size: 1.55rem;
+}
+.exp__card--current .exp__role-head h4 {
+  font-size: 1.3rem;
+  background: linear-gradient(100deg, var(--rose), var(--peach));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.exp__groups {
+  display: grid;
+  gap: 0.9rem;
+}
+.exp__group {
+  display: grid;
+  gap: 0.45rem;
+}
+.exp__tag {
+  justify-self: start;
+  padding: 0.12rem 0.6rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.exp__tag.is-dev {
+  color: var(--accent-ink);
+  background: linear-gradient(110deg, var(--rose), var(--peach));
+  border-color: transparent;
+  font-weight: 700;
+}
+:root[data-theme='dark'] .exp__tag.is-dev {
+  color: #2a0b19;
+}
+
+/* coluna lateral: acompanha a rolagem e usa cards mais discretos */
+.exp__side {
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+}
+.side-card {
+  padding: 1.2rem 1.3rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--text) 3%, transparent);
+}
+.side-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.edu {
+  display: grid;
+  gap: 1.1rem;
+}
+.edu li {
+  display: grid;
+  gap: 0.15rem;
+}
+.edu li + li {
+  padding-top: 1.1rem;
+  border-top: 1px dashed var(--border);
+}
+.edu strong {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+}
+.edu span {
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+.edu em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--accent);
+}
+.langs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.langs li {
+  display: grid;
+  gap: 0.1rem;
+}
+.langs span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (max-width: 960px) {
+  .exp {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .exp__side {
+    position: static;
+  }
+}
+@media (max-width: 520px) {
+  .exp__head,
+  .exp__role-head {
+    flex-wrap: wrap;
+  }
+}

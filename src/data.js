@@ -11,6 +11,7 @@ export const profile = {
 export const nav = [
   { id: 'about', label: 'Sobre' },
   { id: 'skills', label: 'Habilidades' },
+  { id: 'experience', label: 'Experiência' },
   { id: 'projects', label: 'Projetos' },
   { id: 'contact', label: 'Contato' },
 ]
@@ -49,6 +50,92 @@ export const timeline = [
     title: 'Front-end e UX/UI',
     text: 'Aplicações completas como PyLearn e DailyPlan, além de games e arte 2D.',
   },
+]
+
+export const experience = [
+  {
+    company: 'Verdecard Quero-Quero',
+    place: 'Cachoeirinha, RS',
+    period: 'Jun 2026 – Atual',
+    current: true,
+    roles: [
+      {
+        title: 'Estagiária de Design UX/UI – Canais Digitais',
+        groups: [
+          {
+            label: 'UX/UI',
+            bullets: [
+              'Criação de wireframes e protótipos no Figma.',
+              'Jornadas e fluxos de navegação centrados no usuário.',
+              'Soluções com foco em usabilidade e consistência visual.',
+            ],
+          },
+          {
+            label: 'Front-end',
+            dev: true,
+            bullets: [
+              'Desenvolvimento e manutenção do site da Quero-Quero.',
+              'Implementação de interfaces e melhorias em HTML, CSS, JavaScript e PHP.',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    company: 'Código Kid',
+    place: 'Cachoeirinha, RS',
+    period: 'Out 2025 – Jun 2026',
+    roles: [
+      {
+        title: 'Instrutora de Tecnologia e Programação',
+        period: 'Mai 2026 – Jun 2026',
+        bullets: [
+          'Aulas de desenvolvimento web: HTML, CSS, JavaScript e WordPress.',
+          'Ensino de lógica de programação aplicada a páginas e projetos web.',
+        ],
+      },
+      {
+        title: 'Estagiária de TI e Programação',
+        period: 'Out 2025 – Jun 2026',
+        bullets: [
+          'Atividades práticas de construção de sites e interfaces.',
+          'Apoio no ensino de Python, robótica com Arduino e noções de informática.',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'Vem pra Uno',
+    place: 'Cachoeirinha, RS',
+    period: 'Mai 2023 – Set 2023',
+    roles: [
+      {
+        title: 'Estagiária NOC (Network Operations Center)',
+        bullets: ['Suporte técnico e monitoramento de sistemas.'],
+      },
+    ],
+  },
+]
+
+export const education = [
+  {
+    title: 'Engenharia de Software',
+    school: 'Centro Universitário Cesuca',
+    degree: 'Bacharelado',
+    period: '2026 – 2029 · Em andamento',
+  },
+  {
+    title: 'Análise e Desenvolvimento de Sistemas',
+    school: 'Centro Universitário Cesuca',
+    degree: 'Tecnólogo',
+    period: '2022 – 2026 · Em andamento',
+  },
+]
+
+export const languages = [
+  { name: 'Inglês', level: 'Intermediário' },
+  { name: 'Espanhol', level: 'Básico' },
 ]
 
 // Cada linha vira uma fileira de badges (estilo GitHub). Edite à vontade.
