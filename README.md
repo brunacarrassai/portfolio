@@ -2,6 +2,8 @@
 
 React + Vite. Tema escuro/claro, animações ao rolar, 100% responsivo.
 
+https://brunacarrassai.netlify.app
+
 ## Rodar
 ```
 npm install
