@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className="section container">
       <SectionHead
         eyebrow="Sobre mim"
-        title="Transformo ideias em experiências digitais."
+        title="Da curiosidade ao código"
       />
 
       <div className="about">
